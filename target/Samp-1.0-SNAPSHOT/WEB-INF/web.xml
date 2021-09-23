@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>  
+        <welcome-file>contact-us.html</welcome-file>
+    </welcome-file-list>  
+    <servlet>
+        <servlet-name>RegServlet</servlet-name>
+        <servlet-class>Sers.RegServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegServlet</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogServlet</servlet-name>
+        <servlet-class>Sers.LogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>CoutServlet</servlet-name>
+        <servlet-class>Sers.CoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoutServlet</servlet-name>
+        <url-pattern>/cout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>Sers.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OrdServlet</servlet-name>
+        <servlet-class>Sers.OrdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrdServlet</servlet-name>
+        <url-pattern>/midord</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CompmServlet</servlet-name>
+        <servlet-class>Sers.CompmServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompmServlet</servlet-name>
+        <url-pattern>/completed</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SendeServlet</servlet-name>
+        <servlet-class>Sers.SendEmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendeServlet</servlet-name>
+        <url-pattern>/sendemail</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
